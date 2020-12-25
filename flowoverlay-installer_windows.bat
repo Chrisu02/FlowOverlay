@@ -44,10 +44,8 @@ echo =========================================================
 echo.
 echo.  Connected IP Address: %_inputname%
 echo.
-echo.  Press "1" to install and enable on Snapdragon 625
-echo.  Press "2" to update and enable Snapdragon 625
-echo.  Press "3" to install and enable on PX6
-echo.  Press "4" to update and enable PX6
+echo.  Press "1" to install and enable
+echo.  Press "2" to update and enable
 echo.  Press "5" to enable flowOverlay
 echo.  Press "6" to disable flowOverlay
 echo.  Press "7" to reboot device
@@ -57,8 +55,6 @@ set /P installer= Please select a number or press enter to end the script
 echo.
 IF "%installer%"=="1" GOTO :installflow625
 IF "%installer%"=="2" GOTO :updateflow625
-IF "%installer%"=="3" GOTO :installflowPX6
-IF "%installer%"=="4" GOTO :updateflowPX6
 IF "%installer%"=="5" GOTO :enableflowmanual 
 IF "%installer%"=="6" GOTO :disableflow
 IF "%installer%"=="7" GOTO :rebooting
@@ -142,33 +138,6 @@ goto :menu
 call :pingloop
 call :connecting
 call :filesSD625
-call :enableflow
-echo Rebooting device...
-start "" /min "%CD%\.compiler\adb.exe" reboot
-pause
-goto :menu
-
-:installflowPX6
-call :pingloop
-call :connecting
-call :disableverity
-call :pingloop
-call :connecting
-call :filesPX6
-echo Rebooting device...
-start "" /min "%CD%\.compiler\adb.exe" reboot
-call :pingloop
-call :connecting
-call :enableflow
-echo Rebooting device...
-start "" /min "%CD%\.compiler\adb.exe" reboot
-pause
-goto :menu
-
-:updateflowPX6
-call :pingloop
-call :connecting
-call :filesPX6
 call :enableflow
 echo Rebooting device...
 start "" /min "%CD%\.compiler\adb.exe" reboot
