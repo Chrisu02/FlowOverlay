@@ -8,17 +8,19 @@ PURPLE='\033[0;35m'
 STD='\033[0;0;39m'
 
 header(){
-	echo -e "${YELLOW}"
-	echo =========================================================
-	echo "  _  __              ___                 _             ";
-	echo " | |/ /_____      __/ _ \__   _____ _ __| | __ _ _   _ ";
-	echo " | ' // __\ \ /\ / / | | \ \ / / _ \ '__| |/ _\ | | | |";
-	echo " | . \\\\__ \\\\ V  V /| |_| |\ V /  __/ |  | | (_| | |_| |";
-	echo " |_|\_\___/ \_/\_/  \___/  \_/ \___|_|  |_|\__,_|\__, |";
-	echo "                                                 |___/ ";                                                 
-	echo " KswOverlay - written by Nicholas Chum (@nicholaschum) "
-	echo "            - Linux/Mac installer by Rob Smith		 "
-	echo =========================================================
+	
+	echo ==============================================================
+	echo "  ______ _                ____                 _             ";
+	echo " |  ____| |              / __ \               | |            ";
+	echo " | |__  | | _____      _| |  | |_   _____ _ __| | __ _ _   _ ";
+	echo " |  __| | |/ _ \ \ /\ / / |  | \ \ / / _ \ '__| |/ _  | | | |";
+	echo " | |    | | (_) \ V  V /| |__| |\ V /  __/ |  | | (_| | |_| |";
+	echo " |_|    |_|\___/ \_/\_/  \____/  \_/ \___|_|  |_|\__,_|\__, |";
+	echo "                                                        __/ |";
+	echo "  flowOverlay - modified by @Kri                       |___/ ";
+	echo " - based on KswOverlay by Nicholas Chum (@nicholaschum)      ";
+	echo ==============================================================
+echo
 }
 
 menu(){
@@ -31,8 +33,8 @@ menu(){
 	echo  [2] Snapdragon 625 update and enable
 	echo  [3] PX6 initial setup and enable
 	echo  [4] PX6 update and enable
-	echo  [5] Enable KswOverlay
-	echo  [6] Disable KswOverlay
+	echo  [5] Enable flowOverlay
+	echo  [6] Disable flowOverlay
 	echo  [7] Reboot device
 	echo  [8] Reveal factory passcode
 	echo  [9] Enable safe media bypass \(100% volume after reboot\)
@@ -45,12 +47,12 @@ menu_options(){
 	local choice
 	read -p "Enter a choice [0 - 9] " choice
 	case $choice in
-		1) clear; installKSW625 ;;
-		2) clear; updateKSW625 ;;
-		3) clear; installKSWPX6 ;;
-		4) clear; updateKSWPX6 ;;
-		5) clear; enableKSWmanual ;;
-		6) clear; disableKSW ;;
+		1) clear; installflow625 ;;
+		2) clear; updateflow625 ;;
+		3) clear; installflowPX6 ;;
+		4) clear; updateflowPX6 ;;
+		5) clear; enableflowmanual ;;
+		6) clear; disableflow ;;
 		7) clear; rebootdevice ;;
 		8) clear; get_passcode ;;
 		9) clear; enable_safe_media_bypass;;
@@ -85,26 +87,26 @@ disableverity() {
 	.compiler/adb disable-verity > /dev/null
 }
 
-enableKSW() {
-	echo Activating ksw.overlay
+enableflow() {
+	echo Activating flow.overlay
 	sleep 1
-	.compiler/adb shell cmd overlay enable ksw.overlay
-	echo -e "${GREEN}ksw.overlay ENABLED${STD}"
+	.compiler/adb shell cmd overlay enable flow.overlay
+	echo -e "${GREEN}flow.overlay ENABLED${STD}"
 }
 
 filesSD625() {
-	echo Pushing kswoverlay ...
-	.compiler/adb push kswoverlay.apk /storage/emulated/0
-	.compiler/adb shell mv /storage/emulated/0/kswoverlay.apk /system/app
-	.compiler/adb shell chmod 644 /system/app/kswoverlay.apk
+	echo Pushing flowoverlay ...
+	.compiler/adb push flowoverlay.apk /storage/emulated/0
+	.compiler/adb shell mv /storage/emulated/0/flowoverlay.apk /system/app
+	.compiler/adb shell chmod 644 /system/app/flowoverlay.apk
 	sleep 3
 }
 
 filesPX6() {
-	echo Pushing kswoverlay ...
-	.compiler/adb push kswoverlay-px6.apk /storage/emulated/0
-	.compiler/adb shell mv /storage/emulated/0/kswoverlay-px6.apk /system/app
-	.compiler/adb shell chmod 644 /system/app/kswoverlay-px6.apk
+	echo Pushing flowoverlay ...
+	.compiler/adb push flowoverlay-px6.apk /storage/emulated/0
+	.compiler/adb shell mv /storage/emulated/0/flowoverlay-px6.apk /system/app
+	.compiler/adb shell chmod 644 /system/app/flowoverlay-px6.apk
 	sleep 3
 }
 
@@ -125,7 +127,7 @@ rebootdevice() {
 #
 #-----------------------------------
 
-installKSW625() {
+installflow625() {
 	networkcheck
 	connecting
 	disableverity
@@ -136,22 +138,22 @@ installKSW625() {
 	rebootdevice
 	networkcheck
 	connecting
-	enableKSW
+	enableflow
 	rebootdevice
 	pause
 }
 
 
-updateKSW625() {
+updateflow625() {
 	networkcheck
 	connecting
 	filesSD625
-	enableKSW
+	enableflow
 	rebootdevice
 	pause
 }
 
-installKSWPX6() {
+installflowPX6() {
 	networkcheck
 	connecting
 	disableverity
@@ -162,25 +164,25 @@ installKSWPX6() {
 	rebootdevice
 	networkcheck
 	connecting
-	enableKSW
+	enableflow
 	rebootdevice
 	pause
 }
 
 
-updateKSWPX6() {
+updateflowPX6() {
 	networkcheck
 	connecting
 	filesPX6
-	enableKSW
+	enableflow
 	rebootdevice
 	pause
 }
 
 
-enableKSWmanual() {
+enableflowmanual() {
 	connecting
-	enableKSW
+	enableflow
 	pause
 }
 
@@ -248,11 +250,11 @@ enable_safe_media_bypass() {
 	pause
 }
 
-disableKSW() {
+disableflow() {
 	connecting
 	echo Disabling overlay...
-	.compiler/adb shell cmd overlay disable ksw.overlay
-	echo -e "${RED}ksw.overlay DISABLED${STD}"
+	.compiler/adb shell cmd overlay disable flow.overlay
+	echo -e "${RED}flow.overlay DISABLED${STD}"
 	pause
 }
 
@@ -268,7 +270,7 @@ then
 	header
 	echo This will set up your device to be able to easily install
 	echo overlay APKs through the file browser or directly.
-	echo Ensure you already have compiled your KswOverlay apk !
+	echo Ensure you already have compiled your flowOverlay apk !
 	echo -e "${STD} "
 
 	read -p "Enter the IP address of the device (e.g. 192.168.0.1): " headunit_ip

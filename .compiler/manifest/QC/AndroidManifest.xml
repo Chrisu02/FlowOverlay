@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ksw.overlay"
+    package="flow.overlay"
 	android:versionCode="1" 
 	android:versionName="1.0">
 
     <overlay
         android:priority="1"
-        android:targetPackage="com.wits.ksw" />
+        android:targetPackage="projekt.auto" />
 
     <application
 		android:allowBackup="false"
         android:hasCode="false"
-        android:label="KswOverlay" />
+        android:label="flowOverlay" />
 </manifest>

@@ -1,6 +1,7 @@
-# KswOverlay by @nicholaschum
+# FlowOverlay by @Kri
+# Based on KswOverlay by @nicholaschum
 
-This is a tool that automatically creates an overlay for your Ksw-based tablet.
+This is a tool that automatically creates an overlay for your flow-based tablet.
 Available to be used on Mac, Windows and Linux.
 
 ## Disclaimer
@@ -19,8 +20,8 @@ On the top right corner of this GitHub page, click on Clone or Download, and the
 If you never themed before, these are called overlays. They get "overlaid" on top of your existing application and when the app calls for these resources, 
 they take from the overlay first, then the base app.
 
-What you have to do is to take the resources from [https://github.com/KswCarProject/KswPLauncher/tree/147/resources/res](this) link and edit those pictures. 
-If you're editing in a folder named `drawable-hdpi-v4`, make sure that the folder in `resources/res` has that folder and named correctly, with the file. 
+What you have to do is to take the resources from [https://github.com/Chrisu02/FlowOverlay/tree/master/resources/res](this) link and edit those pictures. 
+If you're editing in a folder named `drawable`, make sure that the folder in `resources/res` has that folder and named correctly, with the file. 
 
 Do not put in unedited files because bloating up the overlay is not ideal.
 
@@ -32,7 +33,7 @@ To use this on Windows, make sure Java is installed and then you are able to mak
 
 When you are done, click on `compile-windows.bat` and it will automatically compile and sign an overlay APK for you!
 
-To install, run `kswoverlay-installer_windows.bat` and follow instructions.
+To install, run `flowoverlay-installer_windows.bat` and follow instructions.
 
 
 # Mac Instructions
@@ -40,11 +41,11 @@ To use this on Mac, make sure Java is installed and then you are able to make ch
 
 When you are done, click on `compile-mac.command` and it will automatically compile and sign an overlay APK for you!
 
-To install, run `kswoverlay-installer_mac.command` and follow instructions.
+To install, run `flowoverlay-installer_mac.command` and follow instructions.
 
 # Linux Instructions
 To use this on Linux, make sure Java is installed and then you are able to make changes to the `resources/res/` folder for image and text changes.
 
 When you are done, in the folder housing `compile-linux.sh` you will need to open a Terminal window and type `chmod +x compile-linux.sh`, then you can type `./compile-linux.sh` and it will automatically compile and sign an overlay APK for you!
 
-To install, enter `chmod +x kswoverlay-installer_linux.sh` then run `./kswoverlay-installer_linux.sh`.
+To install, enter `chmod +x flowoverlay-installer_linux.sh` then run `./flowoverlay-installer_linux.sh`.

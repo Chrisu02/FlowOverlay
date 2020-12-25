@@ -1,17 +1,19 @@
 #!/bin/sh
 
-echo =========================================================
-echo "  _  __              ___                 _             ";
-echo " | |/ /_____      __/ _ \__   _____ _ __| | __ _ _   _ ";
-echo " | ' // __\ \ /\ / / | | \ \ / / _ \ '__| |/ _\ | | | |";
-echo " | . \\__ \\ V  V /| |_| |\ V /  __/ |  | | (_| | |_| |";
-echo " |_|\_\___/ \_/\_/  \___/  \_/ \___|_|  |_|\__,_|\__, |";
-echo "                                                 |___/ ";
-echo " KswOverlay - written by Nicholas Chum (@nicholaschum) "
-echo =========================================================
-
+	echo ==============================================================
+	echo "  ______ _                ____                 _             ";
+	echo " |  ____| |              / __ \               | |            ";
+	echo " | |__  | | _____      _| |  | |_   _____ _ __| | __ _ _   _ ";
+	echo " |  __| | |/ _ \ \ /\ / / |  | \ \ / / _ \ '__| |/ _  | | | |";
+	echo " | |    | | (_) \ V  V /| |__| |\ V /  __/ |  | | (_| | |_| |";
+	echo " |_|    |_|\___/ \_/\_/  \____/  \_/ \___|_|  |_|\__,_|\__, |";
+	echo "                                                        __/ |";
+	echo "  flowOverlay - modified by @Kri                       |___/ ";
+	echo " - based on KswOverlay by Nicholas Chum (@nicholaschum)      ";
+	echo ==============================================================
+echo
 echo Compiling overlay...
-./.compiler/aapt p -S resources/res -M .compiler/manifest/QC/AndroidManifest.xml -I .compiler/framework-res.apk -F kswoverlay.apk -f
+./.compiler/aapt p -S resources/res -M .compiler/manifest/QC/AndroidManifest.xml -I .compiler/framework-res.apk -F flowoverlay.apk -f
 
 echo Signing overlay APK...
-./.compiler/apksigner sign --ks .compiler/overlaysig.jks --ks-pass pass:nicholaschum --key-pass pass:nicholaschum kswoverlay.apk
+./.compiler/apksigner sign --ks .compiler/overlaysig.jks --ks-pass pass:nicholaschum --key-pass pass:nicholaschum flowoverlay.apk
