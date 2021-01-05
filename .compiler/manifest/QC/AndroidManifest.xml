@@ -8,6 +8,8 @@
         android:priority="1"
         android:targetPackage="projekt.auto" />
 
+    <uses-permission android:name="projekt.auto.launcher.OVERLAY_COMPONENT"/>
+	
     <application
 		android:allowBackup="false"
         android:hasCode="false"
