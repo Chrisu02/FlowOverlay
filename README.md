@@ -1,4 +1,4 @@
-# FlowOverlay by @Kri
+# FlowOverlay by @Kri Version 1.1
 # Based on KswOverlay by @nicholaschum
 
 This is a tool that automatically creates an overlay for your flow-based tablet.
@@ -21,9 +21,21 @@ If you never themed before, these are called overlays. They get "overlaid" on to
 they take from the overlay first, then the base app.
 
 What you have to do is to take the resources from [https://github.com/Chrisu02/FlowOverlay/tree/master/resources/res](this) link and edit those pictures. 
-If you're editing in a folder named `drawable`, make sure that the folder in `resources/res` has that folder and named correctly, with the file. 
+
+Depending on the Headunit Resolution you have to make the images at a specific Resolution for optimal display quality.
+`drawable-mdpi` - for 1280x480 Display resolution, tile icons have to be 128x128 pixel, Background Images 1280x480 pixel.
+`drawable-hdpi` - for 1920x720 Display resolution, tile icons have to be 192x192 pixel, Background Images 1920x720 pixel.
+`drawable`      - for other Display resolution, tile icons should to be 512x512 pixel, Background Images should be same as Display resolution.
+
+If you're editing in on of the `drawable` folders, make sure that the folder in `resources/res` has that folder and named correctly, with the file. 
 
 Do not put in unedited files because bloating up the overlay is not ideal.
+
+Remove all not changed files from all `drawable` folders which should not be compiled.
+
+It is also possible to edit Tile Names, for this there is a preset at `resources/res/values` which can be changed.
+If you want to rename tiles in a different language you need to rename the folder to your specific language.
+For example to change german language you need rename it to `values-de` or for italian language to `values-it`
 
 Once you're done, follow these next steps to compile.
 

@@ -9,7 +9,7 @@ echo " |  __| | |/ _ \ \ /\ / / |  | \ \ / / _ \ '__| |/ _` | | | |";
 echo " | |    | | (_) \ V  V /| |__| |\ V /  __/ |  | | (_| | |_| |";
 echo " |_|    |_|\___/ \_/\_/  \____/  \_/ \___|_|  |_|\__,_|\__, |";
 echo "                                                        __/ |";
-echo "  flowOverlay - modified by @Kri                       |___/ ";
+echo "  flowOverlay v1.1 - modified by @Kri                  |___/ ";
 echo " - based on KswOverlay by Nicholas Chum (@nicholaschum)      ";
 echo ==============================================================
 echo.
@@ -31,16 +31,17 @@ set _inputname=%_ip%:5555
 
 :menu
 cls
-echo =========================================================
-echo "  _  __              ___                 _             ";
-echo " | |/ /_____      __/ _ \__   _____ _ __| | __ _ _   _ ";
-echo " | ' // __\ \ /\ / / | | \ \ / / _ \ '__| |/ _\ | | | |";
-echo " | . \\__ \\ V  V /| |_| |\ V /  __/ |  | | (_| | |_| |";
-echo " |_|\_\___/ \_/\_/  \___/  \_/ \___|_|  |_|\__,_|\__, |";
-echo "                                                 |___/ ";
-echo " flowOverlay - written by Nicholas Chum (@nicholaschum) "
-echo "            - installer bat by Chri (@kri)           "
-echo =========================================================
+echo ==============================================================
+echo "  ______ _                ____                 _             ";
+echo " |  ____| |              / __ \               | |            ";
+echo " | |__  | | _____      _| |  | |_   _____ _ __| | __ _ _   _ ";
+echo " |  __| | |/ _ \ \ /\ / / |  | \ \ / / _ \ '__| |/ _` | | | |";
+echo " | |    | | (_) \ V  V /| |__| |\ V /  __/ |  | | (_| | |_| |";
+echo " |_|    |_|\___/ \_/\_/  \____/  \_/ \___|_|  |_|\__,_|\__, |";
+echo "                                                        __/ |";
+echo "  flowOverlay v1.1 - modified by @Kri                  |___/ ";
+echo " - based on KswOverlay by Nicholas Chum (@nicholaschum)      ";
+echo ==============================================================
 echo.
 echo.  Connected IP Address: %_inputname%
 echo.

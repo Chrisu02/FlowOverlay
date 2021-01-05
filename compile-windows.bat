@@ -8,7 +8,7 @@ echo " |  __| | |/ _ \ \ /\ / / |  | \ \ / / _ \ '__| |/ _` | | | |";
 echo " | |    | | (_) \ V  V /| |__| |\ V /  __/ |  | | (_| | |_| |";
 echo " |_|    |_|\___/ \_/\_/  \____/  \_/ \___|_|  |_|\__,_|\__, |";
 echo "                                                        __/ |";
-echo "  flowOverlay - modified by @Kri                       |___/ ";
+echo "  flowOverlay v1.1 - modified by @Kri                  |___/ ";
 echo " - based on KswOverlay by Nicholas Chum (@nicholaschum)      ";
 echo ==============================================================
 echo.
