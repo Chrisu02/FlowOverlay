@@ -4,10 +4,10 @@
     <string name="mbux_car_info">Car Info</string>
     <string name="mbux_car_info_subtitle">Display and monitor car statistics</string>
     <string name="mbux_car_subtitle">Return to the original car system</string>
-    <string name="mbux_favorites">Favorite App</string>
-    <string name="mbux_favorites_subtitle">User-selected application</string>
-    <string name="mbux_media">Media</string>
-    <string name="mbux_media_subtitle">Nothing playing</string>
+    <string name="mbux_favorites">Youtube</string>
+    <string name="mbux_favorites_subtitle">Watch online videos</string>
+    <string name="mbux_media">Plexamp</string>
+    <string name="mbux_media_subtitle">Love your music!</string>
     <string name="mbux_more_apps">MORE APPS</string>
     <string name="mbux_more_apps_arrow">▼</string>
     <string name="mbux_navigation">Navigation</string>
@@ -15,12 +15,12 @@
     <string name="mbux_phone">Phone</string>
     <string name="mbux_phone_subtitle">"%s's Phone"</string>
     <string name="mbux_phone_subtitle_for_s">"%s' Phone"</string>
-    <string name="mbux_radio">Radio</string>
-    <string name="mbux_radio_subtitle">DAB+, FM/AM, HD Radio</string>
+    <string name="mbux_radio">Spotify</string>
+    <string name="mbux_radio_subtitle">Music for every mood</string>
     <string name="mbux_smartphone_integration">"PHONE UX
 CONNECT"</string>
-    <string name="mbux_store">Store</string>
+    <string name="mbux_store">Google Play Store</string>
     <string name="mbux_store_subtitle">Download more apps</string>
-    <string name="mbux_videos">Movies</string>
-    <string name="mbux_videos_subtitle">Your favorite films and shows</string>
+    <string name="mbux_videos">Plex</string>
+    <string name="mbux_videos_subtitle">Watch movies and TV shows</string>
 </resources>
